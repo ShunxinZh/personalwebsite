@@ -1,311 +1,393 @@
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Shunxin Zhou | Molecular Mechanism & Evolution Archive</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-surface": "#2d3435",
-              "secondary-dim": "#4d5555",
-              "surface-container-lowest": "#FDFCF8",
-              "secondary": "#596161",
-              "secondary-fixed": "#e9e6e1",
-              "on-surface-variant": "#5a6061",
-              "secondary-container": "#f1eee8",
-              "surface": "#FDFCF8",
-              "on-secondary-fixed-variant": "#555d5d",
-              "on-secondary": "#f3fafa",
-              "outline": "#757c7d",
-              "on-primary-fixed-variant": "#5c5b5b",
-              "on-background": "#2d3435",
-              "secondary-fixed-dim": "#dedbd5",
-              "outline-variant": "#adb3b4",
-              "surface-container": "#f4f1ea",
-              "inverse-on-surface": "#9c9d9d",
-              "surface-container-highest": "#e9e6e1",
-              "on-error": "#fff7f6",
-              "inverse-surface": "#0c0f0f",
-              "primary-fixed-dim": "#d6d4d3",
-              "on-tertiary-fixed-variant": "#506d59",
-              "inverse-primary": "#ffffff",
-              "surface-bright": "#FDFCF8",
-              "on-secondary-fixed": "#394141",
-              "on-primary": "#faf7f6",
-              "surface-container-low": "#FAF9F6",
-              "on-error-container": "#752121",
-              "primary-fixed": "#e5e2e1",
-              "tertiary": "#496553",
-              "on-tertiary-fixed": "#34503e",
-              "tertiary-fixed-dim": "#cdedd5",
-              "primary": "#5f5e5e",
-              "on-secondary-container": "#4b5353",
-              "error-container": "#fe8983",
-              "surface-container-high": "#eef0e8",
-              "error": "#9f403d",
-              "surface-dim": "#d4dbdd",
-              "tertiary-container": "#dcfce3",
-              "background": "#FDFCF8",
-              "primary-dim": "#535252",
-              "on-tertiary": "#e7ffec",
-              "surface-variant": "#e9e6e1",
-              "surface-tint": "#5f5e5e",
-              "on-primary-fixed": "#403f3f",
-              "error-dim": "#4e0309",
-              "tertiary-fixed": "#dcfce3",
-              "on-tertiary-container": "#46624f",
-              "tertiary-dim": "#3e5947",
-              "primary-container": "#e5e2e1",
-              "on-primary-container": "#525151"
+<!DOCTYPE html>
+<html class="light scroll-smooth scroll-pt-32" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Shunxin Zhou | Molecular Mechanism & Evolution Archive</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface": "#2d3435",
+                        "secondary-dim": "#4d5555",
+                        "surface-container-lowest": "#FDFCF8",
+                        "secondary": "#596161",
+                        "secondary-fixed": "#e9e6e1",
+                        "on-surface-variant": "#5a6061",
+                        "secondary-container": "#f1eee8",
+                        "surface": "#FDFCF8",
+                        "on-secondary-fixed-variant": "#555d5d",
+                        "on-secondary": "#f3fafa",
+                        "outline": "#757c7d",
+                        "on-primary-fixed-variant": "#5c5b5b",
+                        "on-background": "#2d3435",
+                        "secondary-fixed-dim": "#dedbd5",
+                        "outline-variant": "#adb3b4",
+                        "surface-container": "#f4f1ea",
+                        "inverse-on-surface": "#9c9d9d",
+                        "surface-container-highest": "#e9e6e1",
+                        "on-error": "#fff7f6",
+                        "inverse-surface": "#0c0f0f",
+                        "primary-fixed-dim": "#d6d4d3",
+                        "on-tertiary-fixed-variant": "#506d59",
+                        "inverse-primary": "#ffffff",
+                        "surface-bright": "#FDFCF8",
+                        "on-secondary-fixed": "#394141",
+                        "on-primary": "#faf7f6",
+                        "surface-container-low": "#FAF9F6",
+                        "on-error-container": "#752121",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary": "#496553",
+                        "on-tertiary-fixed": "#34503e",
+                        "tertiary-fixed-dim": "#cdedd5",
+                        "primary": "#5f5e5e",
+                        "on-secondary-container": "#4b5353",
+                        "error-container": "#fe8983",
+                        "surface-container-high": "#eef0e8",
+                        "error": "#9f403d",
+                        "surface-dim": "#d4dbdd",
+                        "tertiary-container": "#dcfce3",
+                        "background": "#FDFCF8",
+                        "primary-dim": "#535252",
+                        "on-tertiary": "#e7ffec",
+                        "surface-variant": "#e9e6e1",
+                        "surface-tint": "#5f5e5e",
+                        "on-primary-fixed": "#403f3f",
+                        "error-dim": "#4e0309",
+                        "tertiary-fixed": "#dcfce3",
+                        "on-tertiary-container": "#46624f",
+                        "tertiary-dim": "#3e5947",
+                        "primary-container": "#e5e2e1",
+                        "on-primary-container": "#525151"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
             },
-            fontFamily: {
-              "headline": ["Newsreader", "serif"],
-              "body": ["Manrope", "sans-serif"],
-              "label": ["Manrope", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         body {
             font-family: 'Manrope', sans-serif;
             background-color: #FDFCF8;
             color: #2d3435;
             -webkit-font-smoothing: antialiased;
         }
-        .font-serif { font-family: 'Newsreader', serif; }
+
+        .font-serif {
+            font-family: 'Newsreader', serif;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-container" data-mode="connect">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#FDFCF8]/80 backdrop-blur-md shadow-sm border-b border-black/[0.03]">
-<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto w-full">
-<div class="font-serif text-2xl font-semibold tracking-tighter text-zinc-900">
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-container"
+    data-mode="connect">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#FDFCF8]/80 backdrop-blur-md shadow-sm border-b border-black/[0.03]">
+        <div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto w-full">
+            <div class="font-serif text-2xl font-semibold tracking-tighter text-zinc-900">
                 Shunxin Zhou
             </div>
-<div class="hidden md:flex items-center space-x-10">
-<a class="text-zinc-900 font-bold border-b-2 border-zinc-500 pb-1 font-serif italic text-lg tracking-tight" href="#">Research</a>
-<a class="text-zinc-500 hover:text-zinc-800 transition-colors font-serif italic text-lg tracking-tight" href="#">Publications</a>
-<a class="text-zinc-500 hover:text-zinc-800 transition-colors font-serif italic text-lg tracking-tight" href="#">CV</a>
-<a class="text-zinc-500 hover:text-zinc-800 transition-colors font-serif italic text-lg tracking-tight" href="#">Contact</a>
-</div>
-<!-- Mobile Menu Icon (Placeholder) -->
-<div class="md:hidden">
-<span class="material-symbols-outlined text-zinc-900">menu</span>
-</div>
-</div>
-</nav>
-<main class="pt-32 pb-24">
-<!-- Hero Section -->
-<section class="max-w-[1440px] mx-auto px-12 mb-32 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-<div class="md:col-span-7 mb-12 md:mb-0">
-<h2 class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant mb-6">Graduate Student · Biological Sciences</h2>
-<h1 class="font-headline text-6xl md:text-8xl text-on-surface leading-[0.9] tracking-tighter mb-8 italic">
-                    Mapping the <br>
-<span class="font-bold not-italic">Hidden Logic</span> <br>
-                    of Cellular Life.
+            <div class="hidden md:flex items-center space-x-10">
+                <a class="text-zinc-900 font-bold border-b-2 border-zinc-500 pb-1 font-serif italic text-lg tracking-tight"
+                    href="#research">Research</a>
+                <a class="text-zinc-500 hover:text-zinc-800 transition-colors font-serif italic text-lg tracking-tight"
+                    href="#publications">Publications</a>
+                <a class="text-zinc-500 hover:text-zinc-800 transition-colors font-serif italic text-lg tracking-tight"
+                    href="#cv">CV</a>
+                <a class="text-zinc-500 hover:text-zinc-800 transition-colors font-serif italic text-lg tracking-tight"
+                    href="#contact">Contact</a>
+            </div>
+            <!-- Mobile Menu Icon (Placeholder) -->
+            <div class="md:hidden">
+                <span class="material-symbols-outlined text-zinc-900">menu</span>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-32 pb-24">
+        <!-- Hero Section -->
+        <section class="max-w-[1440px] mx-auto px-12 mb-32 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+            <div class="md:col-span-8 mb-12 md:mb-0">
+                <h2 class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant mb-6">Graduate Student
+                    · Biological Sciences</h2>
+                <h1
+                    class="font-headline text-6xl md:text-8xl text-on-surface leading-[0.9] tracking-tighter mb-8 italic">
+                    Revealing the <br>
+                    <span class="font-bold not-italic whitespace-nowrap">Evolutionary Logic</span> <br>
+                    of Gene Regulation.
                 </h1>
-<p class="font-body text-xl text-on-surface-variant max-w-lg leading-relaxed">
-                    Investigating the interplay between molecular mechanisms and evolutionary trajectories to decode the fundamental blueprints of biological complexity.
+                <p class="font-body text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                    Exploring how conserved molecular regulators give rise to divergent regulatory programs across
+                    species, and how changes in regulatory systems shape the emergence of biological diversity.
                 </p>
-</div>
-<div class="md:col-span-5 relative">
-<div class="aspect-[4/5] bg-surface-container-highest overflow-hidden rounded-xl shadow-sm">
-<img alt="Headshot of Shunxin Zhou" class="w-full h-full object-cover mix-blend-multiply opacity-85" data-alt="Headshot of Shunxin Zhou" src="1740262331764.jpg">
-</div>
-<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 shadow-xl max-w-xs border border-[#f0eee6]">
-<p class="font-serif italic text-lg leading-snug">
+            </div>
+            <div class="md:col-span-4 w-[85%] md:w-full mx-auto relative">
+                <div class="aspect-[4/5] bg-surface-container-highest overflow-hidden rounded-xl shadow-sm">
+                    <img alt="Headshot of Shunxin Zhou" class="w-full h-full object-cover mix-blend-multiply opacity-85"
+                        data-alt="Headshot of Shunxin Zhou" src="1740262331764.jpg">
+                </div>
+                <div
+                    class="absolute -bottom-8 -left-2 md:-left-8 bg-surface-container-lowest p-6 md:p-8 shadow-xl max-w-[16rem] md:max-w-xs border border-[#f0eee6] z-10">
+                    <p class="font-serif italic text-base md:text-lg leading-snug">
                         "The archive of life is written in the language of molecules, waiting to be transcribed."
                     </p>
-</div>
-</div>
-</section>
-<!-- Research Focus -->
-<section class="bg-surface-container-low py-32 border-y border-black/[0.02]">
-<div class="max-w-[1440px] mx-auto px-12">
-<div class="flex flex-col md:flex-row justify-between items-baseline mb-20">
-<h2 class="font-headline text-4xl text-on-surface italic">Research Horizons</h2>
-<span class="font-label text-xs uppercase tracking-widest text-outline">Current Inquiry 2024</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<!-- Inquiry 01 -->
-<div class="group">
-<div class="mb-8 overflow-hidden rounded-lg">
-<div class="h-64 bg-surface-container-highest transition-transform duration-700 group-hover:scale-105 relative">
-<img alt="Close up of laboratory glass equipment" class="w-full h-full object-cover grayscale opacity-65 mix-blend-multiply" data-alt="Close up of laboratory glass equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFJqSmpOZEsOcdoKIXJVY8luqNfDFXM68XAy0_L5mJcFyQNrun3pwF4qX47_18Fl6Sh3m-GSMsEcDlAfp5amnMFCvvU7CgSOkcCGIdsnY55T4-0-_bt-G8pKUp7fPo_0NrXcuuFP3VV8nHowWIxTitVPfG73_8LnQnizOHApz-WY7VGTlyfM36GC5U2BqWU5PCSqIjnDyoyvf9OuFQK4Dhs282EHFE4S27vpPZir7cjMnGghVFEwcIv9P2Ibx4oS0X1gEx2P5Gwa8">
-</div>
-</div>
-<h3 class="font-headline text-2xl mb-4 italic">Enzyme Dynamics</h3>
-<p class="font-body text-on-surface-variant leading-relaxed mb-6">
-                            Investigating how subtle conformational changes in enzymes dictate macro-evolutionary fitness landscapes across divergent species.
+                </div>
+            </div>
+        </section>
+        <!-- Research Focus -->
+        <section id="research" class="bg-surface-container-low py-32 border-y border-black/[0.02]">
+            <div class="max-w-[1440px] mx-auto px-12">
+                <div class="flex flex-col md:flex-row justify-between items-baseline mb-20">
+                    <h2 class="font-headline text-4xl text-on-surface italic">Research Horizons</h2>
+                    <span class="font-label text-xs uppercase tracking-widest text-outline">Current Inquiry 2026</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-6xl mx-auto">
+                    <!-- Inquiry 01 -->
+                    <div class="group">
+                        <div class="mb-8 overflow-hidden rounded-lg">
+                            <div
+                                class="h-64 bg-surface-container-highest transition-transform duration-700 group-hover:scale-105 relative">
+                                <img alt="Close up of laboratory glass equipment"
+                                    class="w-full h-full object-cover grayscale opacity-65 mix-blend-multiply"
+                                    data-alt="Close up of laboratory glass equipment"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFJqSmpOZEsOcdoKIXJVY8luqNfDFXM68XAy0_L5mJcFyQNrun3pwF4qX47_18Fl6Sh3m-GSMsEcDlAfp5amnMFCvvU7CgSOkcCGIdsnY55T4-0-_bt-G8pKUp7fPo_0NrXcuuFP3VV8nHowWIxTitVPfG73_8LnQnizOHApz-WY7VGTlyfM36GC5U2BqWU5PCSqIjnDyoyvf9OuFQK4Dhs282EHFE4S27vpPZir7cjMnGghVFEwcIv9P2Ibx4oS0X1gEx2P5Gwa8">
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-3xl mb-4 italic">Transcription Factor Regulatory Divergence</h3>
+                        <p class="font-body text-lg text-on-surface-variant leading-loose mb-0">
+                            Researching how homologous transcription factors diverge in regulatory function across
+                            species. Using interspecies yeast hybrids, I study the molecular basis of regulatory
+                            evolution and gene expression divergence.
                         </p>
-<a class="font-label text-xs uppercase tracking-widest border-b border-primary pb-1 inline-block hover:text-primary transition-colors" href="#">Explore Inquiry</a>
-</div>
-<!-- Inquiry 02 -->
-<div class="group">
-<div class="mb-8 overflow-hidden rounded-lg">
-<div class="h-64 bg-surface-container-highest transition-transform duration-700 group-hover:scale-105 relative">
-<img alt="Abstract DNA sequence visualization" class="w-full h-full object-cover grayscale opacity-65 mix-blend-multiply" data-alt="Abstract DNA sequence visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1Srv-0NKj3ltfeF7oXBJQaG7Q3B1J5nAU6mVdb6nm1sqdGtv7AnVmRxqZ24ZJjp6Jj_w3cAy3cEGgzi_yqNX4M7qji6ZILXZrQ3oiheqYGvjDjPlmpvNvc0sVZE-mRGmEC_9IPxO9PPBRqdG16gy2HqpE8E5ZsO10L9PxSh5Ejc4-or1aX955DObaNWK7awV_mQk995K3d3gqh0dlHMn3Wrd9MMaLA0nP6RS2EanFtmqFy_24KNHBT_W5vhh_GHW6zhZqXg1SZ0">
-</div>
-</div>
-<h3 class="font-headline text-2xl mb-4 italic">Genomic Stability</h3>
-<p class="font-body text-on-surface-variant leading-relaxed mb-6">
-                            Developing computational models to predict the metabolic impact of non-coding mutations in highly conserved regulatory regions.
+                    </div>
+                    <!-- Inquiry 02 -->
+                    <div class="group">
+                        <div class="mb-8 overflow-hidden rounded-lg">
+                            <div
+                                class="h-64 bg-surface-container-highest transition-transform duration-700 group-hover:scale-105 relative">
+                                <img alt="Abstract DNA sequence visualization"
+                                    class="w-full h-full object-cover grayscale opacity-65 mix-blend-multiply"
+                                    data-alt="Abstract DNA sequence visualization"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1Srv-0NKj3ltfeF7oXBJQaG7Q3B1J5nAU6mVdb6nm1sqdGtv7AnVmRxqZ24ZJjp6Jj_w3cAy3cEGgzi_yqNX4M7qji6ZILXZrQ3oiheqYGvjDjPlmpvNvc0sVZE-mRGmEC_9IPxO9PPBRqdG16gy2HqpE8E5ZsO10L9PxSh5Ejc4-or1aX955DObaNWK7awV_mQk995K3d3gqh0dlHMn3Wrd9MMaLA0nP6RS2EanFtmqFy_24KNHBT_W5vhh_GHW6zhZqXg1SZ0">
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-3xl mb-4 italic">Nodule Senescence Regulation Network</h3>
+                        <p class="font-body text-lg text-on-surface-variant leading-loose mb-0">
+                            Examining how transcription factors control soybean nodule senescence through coordinated
+                            gene regulatory networks. By identifying key regulators and their downstream pathways, I aim
+                            to better understand nodule longevity and improve symbiotic nitrogen fixation efficiency in
+                            soybean.
                         </p>
-<a class="font-label text-xs uppercase tracking-widest border-b border-primary pb-1 inline-block hover:text-primary transition-colors" href="#">Explore Inquiry</a>
-</div>
-<!-- Inquiry 03 -->
-<div class="group">
-<div class="mb-8 overflow-hidden rounded-lg">
-<div class="h-64 bg-surface-container-highest transition-transform duration-700 group-hover:scale-105 relative">
-<img alt="Microscopic view of cellular architecture" class="w-full h-full object-cover grayscale opacity-65 mix-blend-multiply" data-alt="Microscopic view of cellular architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiwyhmNEBoQn6Zo6ML_PpTwrTYXe2lL8aYsOOSjnQJPwTNFlzZRfZszFumovAkL_WRseBuW4ezPOjPdO6gXbyeXCepK3_Km4MYwnTgZKe0NoRmZOc7oLB8pd-R2_PL3tGx53JmxbZVIVqwdSnRBnzDbUd5gszGfy0RzOI5JGUYWgMPt2ErzEtJGYcJFf4cT5vQGz0GT8UwBLLHq65pZeP5R7w1NMUMlP81lvMwH8YCWnfcgPeCYXHxbsHMmRRRUxZUGlk_oo8Swxo">
-</div>
-</div>
-<h3 class="font-headline text-2xl mb-4 italic">Evolutionary Flux</h3>
-<p class="font-body text-on-surface-variant leading-relaxed mb-6">
-                            Analyzing the structural constraints of protein folding and their role in limiting or enabling rapid phenotypic adaptation.
-                        </p>
-<a class="font-label text-xs uppercase tracking-widest border-b border-primary pb-1 inline-block hover:text-primary transition-colors" href="#">Explore Inquiry</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Selected Publications -->
-<section class="max-w-[1440px] mx-auto px-12 py-32 grid grid-cols-1 md:grid-cols-12 gap-16 bg-surface">
-<div class="md:col-span-4">
-<div class="sticky top-40">
-<h2 class="font-headline text-4xl mb-8">Selected Archive</h2>
-<p class="font-body text-on-surface-variant leading-relaxed mb-8">
-                        Peer-reviewed contributions to the understanding of molecular phylogenetics and structural biology.
+                    </div>
+                </div>
+        </section>
+        <!-- Selected Publications -->
+        <section id="publications"
+            class="max-w-[1440px] mx-auto px-12 py-32 grid grid-cols-1 md:grid-cols-12 gap-16 bg-surface">
+            <div class="md:col-span-4">
+                <div class="sticky top-40">
+                    <h2 class="font-headline text-4xl mb-8">Publications</h2>
+                    <p class="font-body text-on-surface-variant leading-relaxed mb-8">
+                        Peer-reviewed contributions to the understanding of molecular phylogenetics and structural
+                        biology.
                     </p>
-<div class="flex items-center gap-4 group cursor-pointer">
-<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
-<span class="material-symbols-outlined text-sm">arrow_downward</span>
-</div>
-<span class="font-label text-xs uppercase tracking-widest">Full Google Scholar</span>
-</div>
-</div>
-</div>
-<div class="md:col-span-8 flex flex-col space-y-20">
-<!-- Pub 01 -->
-<div class="group cursor-default">
-<div class="flex items-center gap-3 mb-4">
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-full">Plants (Basel)</span>
-<span class="text-xs text-outline font-label">2021</span>
-</div>
-<h3 class="font-headline text-3xl mb-6 group-hover:text-primary transition-colors leading-tight italic">
-                        Characteristics and research progress of legume nodule senescence
+                    <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-4 group cursor-pointer">
+                        <div
+                            class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+                        </div>
+                        <span class="font-label text-xs uppercase tracking-widest">Full Google Scholar</span>
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-span-8 flex flex-col space-y-20">
+                <!-- Pub 01 -->
+                <div class="group cursor-default">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span
+                            class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-full">Journal
+                            Placeholder</span>
+                        <span class="text-xs text-outline font-label">2026</span>
+                    </div>
+                    <h3
+                        class="font-headline text-3xl mb-6 group-hover:text-primary transition-colors leading-tight italic">
+                        Fourth Publication Title Placeholder
                     </h3>
-<p class="font-body text-on-surface-variant leading-relaxed mb-6 max-w-2xl">
-                        Zhou, S., & Miller, A. This study utilizes high-resolution crystallography to demonstrate how conformational entropy drives early functional divergence.
+                    <p class="font-body text-on-surface-variant leading-relaxed mb-6 max-w-2xl">
+                        Author List. Description placeholder for the fourth publication listed in the original design
+                        layout.
                     </p>
-<button class="font-label text-[10px] uppercase tracking-widest text-primary flex items-center gap-2 group/btn">
-                        View DOI <span class="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">north_east</span>
-</button>
-</div>
-<!-- Pub 02 -->
-<div class="group cursor-default">
-<div class="flex items-center gap-3 mb-4">
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-full">Frontiers in Microbiology</span>
-<span class="text-xs text-outline font-label">2021</span>
-</div>
-<h3 class="font-headline text-3xl mb-6 group-hover:text-primary transition-colors leading-tight italic">
-                        Identification of the important genes of Bradyrhizobium diazoefficiens 113-2
-                    </h3>
-<p class="font-body text-on-surface-variant leading-relaxed mb-6 max-w-2xl">
-                        Songli Yuan, Shunxin Zhou, et al. Involved in soybean nodule development and senescence.
-                    </p>
-<button class="font-label text-[10px] uppercase tracking-widest text-primary flex items-center gap-2 group/btn">
-                        View DOI <span class="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">north_east</span>
-</button>
-</div>
-<!-- Pub 03 -->
-<div class="group cursor-default">
-<div class="flex items-center gap-3 mb-4">
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-full">Journal of Experimental Botany</span>
-<span class="text-xs text-outline font-label">2023</span>
-</div>
-<h3 class="font-headline text-3xl mb-6 group-hover:text-primary transition-colors leading-tight italic">
+                    <a href="https://doi.org/" target="_blank"
+                        class="font-label text-[10px] uppercase tracking-widest text-primary inline-flex items-center gap-2 group/btn">
+                        View DOI <span
+                            class="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">north_east</span>
+                    </a>
+                </div>
+                <!-- Pub 02 -->
+                <div class="group cursor-default">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span
+                            class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-full">Journal
+                            of Experimental Botany</span>
+                        <span class="text-xs text-outline font-label">2023</span>
+                    </div>
+                    <h3
+                        class="font-headline text-3xl mb-6 group-hover:text-primary transition-colors leading-tight italic">
                         The Bax inhibitor GmBI-1α interacts with a Nod factor receptor
                     </h3>
-<p class="font-body text-on-surface-variant leading-relaxed mb-6 max-w-2xl">
+                    <p class="font-body text-on-surface-variant leading-relaxed mb-6 max-w-2xl">
                         Songli Yuan, et al. Plays a dual role in the legume–rhizobia symbiosis.
                     </p>
-<button class="font-label text-[10px] uppercase tracking-widest text-primary flex items-center gap-2 group/btn">
-                        View DOI <span class="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">north_east</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Bio/Experience -->
-<section class="bg-surface-container py-32 border-t border-black/[0.03]">
-<div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 md:grid-cols-12 gap-16">
-<div class="md:col-span-8 md:col-start-3">
-<div class="flex flex-col space-y-12">
-<h2 class="font-headline text-5xl leading-tight">
-                            Synthesizing <span class="italic">history</span> and <span class="italic">mechanics</span> to understand the future of life.
-                        </h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 font-body text-on-surface-variant leading-relaxed">
-<p>
-                                Currently a Graduate Student in Biological Sciences at Purdue University. My research focuses on the molecular mechanisms of plant-microbe interactions and evolutionary trajectories, combining molecular laboratory techniques with computational analysis.
-                            </p>
-<p>
-                                Before my doctoral studies, I completed my M.S. in Agronomy and Seed Industry at the Chinese Academy of Agricultural Sciences, and my B.Sc. in Seed Science and Engineering at Northeast Agricultural University. I am passionate about uncovering the elegant rules that govern how life adapts at its most fundamental level.
-                            </p>
-</div>
-<!-- Experience Timeline -->
-<div class="pt-12 border-t border-outline-variant/30">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div>
-<h4 class="font-label text-xs uppercase tracking-widest text-outline mb-4">Education</h4>
-<ul class="font-body text-sm space-y-4">
-<li>M.S., Agronomy & Seed Industry <br> <span class="text-outline">CAAS, Beijing (2019-2022)</span></li>
-<li>B.Sc., Seed Science & Engineering <br> <span class="text-outline">NEAU, Harbin (2015-2019)</span></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label text-xs uppercase tracking-widest text-outline mb-4">Research Experience</h4>
-<ul class="font-body text-sm space-y-4">
-<li>National Major Transgenic Project <br> <span class="text-outline">2021-2022</span></li>
-<li>Natural Science Foundation <br> <span class="text-outline">2019-2022</span></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label text-xs uppercase tracking-widest text-outline mb-4">Contact</h4>
-<ul class="font-body text-sm space-y-4">
-<li>zhou1453@purdue.edu</li>
-<li>Laboratory of Evolutionary Genomics <br> Building 402, Room 14</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full border-t border-black/[0.05] bg-[#F9F8F3]">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full max-w-[1440px] mx-auto">
-<div class="font-sans text-xs uppercase tracking-widest text-zinc-600 mb-8 md:mb-0">
-                © 2024 Shunxin Zhou. Molecular Mechanism & Evolution Archive.
+                    <a href="https://doi.org/10.1093/jxb/erad276" target="_blank"
+                        class="font-label text-[10px] uppercase tracking-widest text-primary inline-flex items-center gap-2 group/btn">
+                        View DOI <span
+                            class="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">north_east</span>
+                    </a>
+                </div>
+                <!-- Pub 03 -->
+                <div class="group cursor-default">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span
+                            class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-full">Plants
+                            (Basel)</span>
+                        <span class="text-xs text-outline font-label">2021</span>
+                    </div>
+                    <h3
+                        class="font-headline text-3xl mb-6 group-hover:text-primary transition-colors leading-tight italic">
+                        Characteristics and research progress of legume nodule senescence
+                    </h3>
+                    <p class="font-body text-on-surface-variant leading-relaxed mb-6 max-w-2xl">
+                        Shunxin Zhou, Chanjuan Zhang, Yi Huang, Haifeng Chen, Songli Yuan, Xinan Zhou.
+                    </p>
+                    <a href="https://doi.org/10.3390/plants10061103" target="_blank"
+                        class="font-label text-[10px] uppercase tracking-widest text-primary inline-flex items-center gap-2 group/btn">
+                        View DOI <span
+                            class="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">north_east</span>
+                    </a>
+                </div>
+                <!-- Pub 04 -->
+                <div class="group cursor-default">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span
+                            class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-full">Frontiers
+                            in Microbiology</span>
+                        <span class="text-xs text-outline font-label">2021</span>
+                    </div>
+                    <h3
+                        class="font-headline text-3xl mb-6 group-hover:text-primary transition-colors leading-tight italic">
+                        Identification of the important genes of Bradyrhizobium diazoefficiens 113-2
+                    </h3>
+                    <p class="font-body text-on-surface-variant leading-relaxed mb-6 max-w-2xl">
+                        Songli Yuan, Shunxin Zhou, et al. Involved in soybean nodule development and senescence.
+                    </p>
+                    <a href="https://doi.org/10.3389/fmicb.2021.754837" target="_blank"
+                        class="font-label text-[10px] uppercase tracking-widest text-primary inline-flex items-center gap-2 group/btn">
+                        View DOI <span
+                            class="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">north_east</span>
+                    </a>
+                </div>
             </div>
-<div class="flex gap-12">
-<a class="font-sans text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-900 underline underline-offset-4 transition-all" href="#">Email</a>
-<a class="font-sans text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-900 underline underline-offset-4 transition-all" href="#">LinkedIn</a>
-<a class="font-sans text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-900 underline underline-offset-4 transition-all" href="#">ORCID</a>
-<a class="font-sans text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-900 underline underline-offset-4 transition-all" href="#">Google Scholar</a>
-</div>
-</div>
-</footer>
-</body></html>
+        </section>
+        <!-- Bio/Experience -->
+        <section id="cv" class="bg-surface-container py-32 border-t border-black/[0.03]">
+            <div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 md:grid-cols-12 gap-16">
+                <div class="md:col-span-8 md:col-start-3">
+                    <div class="flex flex-col space-y-12">
+                        <h2 class="font-headline text-5xl leading-tight text-center">
+                            Exploring how <span class="italic">evolution</span> rewires gene regulation to generate
+                            biological diversity.
+                        </h2>
+                        <div class="max-w-4xl mx-auto font-body text-on-surface-variant leading-relaxed text-center">
+                            <p>
+                                Currently a Graduate Student in Biological Sciences at Purdue University.
+                                My research asks how homologous transcription factors evolve different regulatory
+                                programs despite pleiotropic constraint.
+                                Using Saccharomyces cerevisiae and Saccharomyces eubayanus in a hybrid yeast system, I
+                                combine reciprocal hemizygosity
+                                , promoter swapping, and RNA-seq to quantify how often transcription factors diverge and
+                                whether divergence is driven mainly
+                                by changes within promoters or coding regions. I also test the extent to which
+                                differences in regulation change across environments
+                                and use ancestral reconstruction to determine how regulatory divergence accumulates
+                                across lineages. My long-term research interest lies in uncovering
+                                how gene regulatory systems organize biological processes and drive functional
+                                adaptation across diverse living systems.
+                            </p>
+                        </div>
+                        <!-- Experience Timeline -->
+                        <div class="pt-12 border-t border-outline-variant/30">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div>
+                                    <h4 class="font-label text-xs uppercase tracking-widest text-outline mb-4">Education
+                                    </h4>
+                                    <ul class="font-body text-sm space-y-4">
+                                        <li>M.S., Agronomy & Seed Industry <br> <span class="text-outline">CAAS, Beijing
+                                                (2019-2022)</span></li>
+                                        <li>B.Sc., Seed Science & Engineering <br> <span class="text-outline">NEAU,
+                                                Harbin (2015-2019)</span></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-label text-xs uppercase tracking-widest text-outline mb-4">Research
+                                        Experience</h4>
+                                    <ul class="font-body text-sm space-y-4">
+                                        <li>National Major Transgenic Project <br> <span
+                                                class="text-outline">2021-2022</span></li>
+                                        <li>Natural Science Foundation <br> <span class="text-outline">2019-2022</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-label text-xs uppercase tracking-widest text-outline mb-4">Contact
+                                    </h4>
+                                    <ul class="font-body text-sm space-y-4">
+                                        <li>zhou1453@purdue.edu</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="contact" class="w-full border-t border-black/[0.05] bg-[#F9F8F3]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full max-w-[1440px] mx-auto">
+            <div class="font-sans text-xs uppercase tracking-widest text-zinc-600 mb-8 md:mb-0">
+                © 2026 Shunxin Zhou. Molecular Mechanism & Evolution Archive.
+            </div>
+            <div class="flex gap-12">
+                <a class="font-sans text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-900 underline underline-offset-4 transition-all"
+                    href="#">Email</a>
+                <a class="font-sans text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-900 underline underline-offset-4 transition-all"
+                    href="#">LinkedIn</a>
+                <a class="font-sans text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-900 underline underline-offset-4 transition-all"
+                    href="#">ORCID</a>
+                <a class="font-sans text-xs uppercase tracking-widest text-zinc-500 hover:text-zinc-900 underline underline-offset-4 transition-all"
+                    href="#">Google Scholar</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
